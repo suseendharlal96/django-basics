@@ -1,0 +1,34 @@
+{%extends 'base.html' %} {%block content%}
+<div class="destinations" id="destinations">
+  <div class="container">
+    <div class="row destinations_row">
+      <div class="col">
+        <div class="destinations_container item_grid">
+          <h2>destination</h2>
+          <!-- Destination -->
+          <div class="destination item">
+            <div class="destination_image">
+              <img src="{{dest.img.url}}" alt="{{dest.name}}" />
+              {% if dest.offer %}
+              <div class="spec_offer text-center">
+                <a href="#">Special Offer</a>
+              </div>
+              {% endif %}
+            </div>
+            <div class="destination_content">
+              <div class="destination_title">
+                <a href="destinations.html">{{dest.name}}</a>
+              </div>
+              <div class="destination_subtitle">
+                <p>{{dest.description}}</p>
+              </div>
+              <div class="destination_price">From ${{dest.price}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endblock%}
