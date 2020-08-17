@@ -240,6 +240,8 @@
                   </div>
                   <div class="destination_price">From ${{dest.price}}</div>
                 </div>
+                {% empty %}
+                <p>No destinations to display</p>
               </div>
               {%endfor%}
             </div>

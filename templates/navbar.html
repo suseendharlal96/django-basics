@@ -18,18 +18,16 @@
                 {% if user.is_authenticated %}
                 <li style="color: white;">Hello, {{user.first_name}}</li>
                 <li><a href="account/logout">Logout</a></li>
-                {%else%} 
-                {%if '/account' in request.path%}
+                {%else%} {%if '/account' in request.path%}
                 <li><a href="register">Register</a></li>
                 <li><a href="login">Login</a></li>
-                {%elif '/destination' in request.path%}
-                <li><a href="/account/register">Register</a></li>
-                <li><a href="/account/login">Login</a></li>
-                {%else%}
+                {%elif request.path == '/' %}
                 <li><a href="account/register">Register</a></li>
                 <li><a href="account/login">Login</a></li>
-                {%endif%}
-                 {%endif%}
+                {%else%}
+                <li><a href="/account/register">Register</a></li>
+                <li><a href="/account/login">Login</a></li>
+                {%endif%} {%endif%}
               </ul>
             </nav>
             <div class="header_phone ml-auto">
