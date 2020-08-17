@@ -19,8 +19,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', include('ecart.urls')),
     path('admin/', admin.site.urls),
+    path('', include('ecart.urls')),
     path('calc/', include('calc.urls')),
     path('account/', include('auth.urls'))
 ]

@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ecart.apps.EcartConfig'
+    'ecart',
+    # 'ecart.apps.EcartConfig',
+    # 'calc.apps.CalcConfig'
 ]
 
 MIDDLEWARE = [

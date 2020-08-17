@@ -45,13 +45,19 @@ def index(request):
 
     dests = Destination.objects.all()
     # print(dests[0].img)
-    return render(request, 'index.html', {"dests": dests})
+    context = {
+        "dests": dests
+    }
+    return render(request, 'index.html', context)
 
 
 def destination(request, place):
-    print('susee', place,type(place))
-    dest = Destination.objects.get(name=place.capitalize())
-    # myplace = get_object_or_404(Destination,  name=place)
-    # print('lal', myplace.name)
-    print(auth.get_user)
-    return render(request, 'destination.html',{'dest':dest})
+    # 1st approach
+    # dest = Destination.objects.get(name=place.capitalize())
+
+    # 2nd approach(to check wheather it exists or 404 page)
+    dest = get_object_or_404(Destination,  name=place.capitalize())
+    context = {
+        "dest": dest
+    }
+    return render(request, 'destination.html', context)

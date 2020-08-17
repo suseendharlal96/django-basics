@@ -212,6 +212,7 @@ section
 {
 	width: 100%;
 	overflow: hidden;
+	background-color: chocolate;
 }
 .prlx_parent
 {
@@ -827,7 +828,7 @@ section
 .destinations
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: burlywood;
 	padding-top: 115px;
 	padding-bottom: 116px;
 }
