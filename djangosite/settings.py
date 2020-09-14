@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ecart',
+    'blog.apps.BlogConfig'
     # 'ecart.apps.EcartConfig',
     # 'calc.apps.CalcConfig'
 ]

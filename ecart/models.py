@@ -16,8 +16,8 @@ from django.db import models
 
 # with DB
 class Destination(models.Model):
-    name = models.CharField(max_length=150)
+    name: str = models.CharField(max_length=150)
     img = models.ImageField(upload_to='pics')
-    description = models.TextField()
-    price = models.IntegerField()
-    offer = models.BooleanField(default=False)
+    description: str = models.TextField()
+    price: int = models.IntegerField()
+    offer: bool = models.BooleanField(default=False)

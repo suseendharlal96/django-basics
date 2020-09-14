@@ -51,7 +51,7 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-def destination(request, place):
+def single_destination_view(request, place):
     # 1st approach
     # dest = Destination.objects.get(name=place.capitalize())
 

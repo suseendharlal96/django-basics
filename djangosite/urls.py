@@ -22,6 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('ecart.urls')),
     path('calc/', include('calc.urls')),
-    path('account/', include('auth.urls'))
+    path('account/', include('auth.urls')),
+    path('blog/', include('blog.urls'))
 ]
-urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns = urlpatterns + \
+    static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
